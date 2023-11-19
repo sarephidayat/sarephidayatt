@@ -1,0 +1,279 @@
+:root {
+    --blue: #64a0f9;
+    --black: #37404a;
+    --gray: #c4d5ef;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    
+    /* border: rgb(36, 11, 11) 2px double; */
+  }
+  
+  section {
+    min-height: 100vh;
+    padding: 96px;
+    display: flex;
+  }
+  
+  #intro {
+    justify-content: space-between;
+    background-color: rgb(221, 221, 183);
+  }
+  
+  #about {
+    background: #6eaae6;
+    color: white;
+    /* text-align: center; */
+  }
+  
+  #about > div {
+    width: 80%;
+    /* text-align: center; */
+  }
+  
+  #about > div > h2 {
+    color: rgb(15, 13, 13);
+    text-align: center;
+  }
+
+.my-fetish{
+  color: whitesmoke;
+  /* font-size: 1em; */
+  width: 50%;
+  float: left;
+  padding: 20px 30px;
+
+}
+
+.my-history{
+  color: white;
+  /* font-size: 1em; */
+  width: 50%;
+  float: left;
+  padding: 20px 30px;
+}
+  
+#about .paragrap p{
+    font-family: 'Courier Prime', monospace;
+}
+
+  #about,
+  #skills {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  #intro > img {
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+    border: var(--black) 7px solid;
+  }
+  
+  #intro > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Typography */
+  h1 {
+    font-size: 6em;
+    margin: 0;
+    color: var(--blue);
+    font-weight: 900;
+  }
+  
+  h2 {
+    font-size: 3.5em;
+    margin: 0;
+    color: var(--black);
+  }
+  
+  h3 {
+    color: var(--black);
+    font-size: 1.5em;
+    font-weight: 850;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+  
+  /* Skill */
+  #skills > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill-list {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .skill-item {
+    height: 60px;
+    width: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .skill-item > p {
+    font-weight: bold;
+  }
+  
+  .progress-bar {
+    height: 20px;
+    width: 350px;
+    background-color: rgb(185, 182, 182);
+  }
+  
+  .bar {
+    height: 100%;
+    background: rgb(0, 255, 13);
+  }
+  
+  #bar-html {
+    width: 90%;
+  }
+  
+  #bar-css {
+    width: 80%;
+  }
+  
+  #bar-js {
+    width: 50%;
+  }
+  
+  /* Contacts */
+  #contacts,
+  #contacts > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bbbdbe;
+  }
+  
+  #contacts > div {
+    flex-direction: column;
+
+  }
+  
+  #contacts > div > div {
+    margin-top: 24px;
+    display: flex;
+    gap: 27px;
+  }
+  
+  .contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 30px 18px;
+    background: var(--blue);
+    color: white;
+    border: 0;
+    height: 60px;
+    width: fit-content;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .contact-btn > i {
+    font-size: 36px;
+  }
+  
+  .contact-btn > p {
+    font-size: 24px;
+  }
+  
+  .contact-btn:hover {
+    color: var(--blue);
+    background: white;
+    border: var(--blue) 2px solid;
+  }
+  
+  /* Media Queries */
+  /* Media query for screens 600 pixels and below (typical mobile screens) */
+  @media screen and (max-width: 600px) {
+    section {
+      padding: 64px 32px;
+    }
+  
+    h1 {
+      font-size: 3.5em;
+    }
+    h2 {
+      font-size: 2em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  
+    .contact-btn > p {
+      font-size: 1em;
+      padding: 0;
+    }
+  
+    .contact-btn > i {
+      font-size: 30px;
+    }
+  
+    #intro > img {
+      width: 80%;
+      height: 80%;
+      border: var(--blue) 6px solid;
+    }
+  
+    .skill-item > p {
+      line-height: 0;
+    }
+  }
+  
+  /* Media query for screens 768 pixels and below (common tablet screens) */
+  @media screen and (max-width: 768px) {
+    #intro {
+      flex-direction: column-reverse;
+      justify-content: space-evenly;
+    }
+  }
+  
+  /* Media query for screens 1024 pixels and below (common small desktop screens) */
+  @media screen and (max-width: 1024px) {
+    #intro {
+      flex-direction: column;
+    }
+  
+    #contacts > div > h2 {
+      text-align: center;
+    }
+    #contact-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .skill-item {
+      flex-direction: column;
+      gap: 0;
+      height: fit-content;
+      width: fit-content;
+      align-items: flex-start;
+    }
+  
+    .skill-list {
+      gap: 36px;
+    }
+  }
