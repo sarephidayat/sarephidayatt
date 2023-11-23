@@ -24,6 +24,8 @@
   #intro {
     justify-content: space-between;
     background-color: rgb(221, 221, 183);
+    background-image: url(background);
+    background-size: cover;
   }
   
   #about {
@@ -39,25 +41,9 @@
   
   #about > div > h2 {
     color: rgb(15, 13, 13);
-    text-align: center;
+    /* text-align: center; */
   }
 
-.my-fetish{
-  color: whitesmoke;
-  /* font-size: 1em; */
-  width: 50%;
-  float: left;
-  padding: 20px 30px;
-
-}
-
-.my-history{
-  color: white;
-  /* font-size: 1em; */
-  width: 50%;
-  float: left;
-  padding: 20px 30px;
-}
   
 #about .paragrap p{
     font-family: 'Courier Prime', monospace;
@@ -70,17 +56,58 @@
     justify-content: space-evenly;
   }
   
+  /* #intro img{
+    opacity: 0.5;
+  } */
+
   #intro > img {
     width: 35%;
     height: 35%;
     border-radius: 50%;
     border: var(--black) 7px solid;
+    opacity: 0.8;
   }
   
   #intro > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  #about {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #37404a;
+    display: flex;
+    background-image: url(haha.jpg);
+    /* background-color: rgb(114, 107, 96); */
+  }
+
+  .paragrap > img{
+    width: 20em;
+    height: 20em;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+
+  .paragrap{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+  }
+
+  .paragrap p{
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+  }
+
+  #about > .paragrap h2{
+    font-size: 3.5em;
+    margin: 0;
+    color: var(--gray);
   }
   
   /* Typography */
@@ -94,11 +121,11 @@
   h2 {
     font-size: 3.5em;
     margin: 0;
-    color: var(--black);
+    color: var(--gray);
   }
   
   h3 {
-    color: var(--black);
+    color: var(--gray);
     font-size: 1.5em;
     font-weight: 850;
     text-align: center;
@@ -109,6 +136,9 @@
   }
   
   /* Skill */
+  #skills {
+    background-color: #37404a;
+  }
   #skills > div {
     display: flex;
     flex-direction: column;
@@ -163,7 +193,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #bbbdbe;
+    background-image: url(haha.jpg);
+
   }
   
   #contacts > div {
@@ -222,7 +253,13 @@
     p {
       font-size: 1em;
     }
-  
+    
+    .paragrap{
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+    }
+
     .contact-btn > p {
       font-size: 1em;
       padding: 0;
@@ -248,6 +285,11 @@
     #intro {
       flex-direction: column-reverse;
       justify-content: space-evenly;
+    }
+    .paragrap{
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
     }
   }
   
@@ -275,5 +317,61 @@
   
     .skill-list {
       gap: 36px;
+    }
+  }
+
+  /* button */
+  .button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 1px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 80px;
+    min-width: 80px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .button-64:active,
+  .button-64:hover {
+    outline: 0;
+  }
+  
+  .button-64 span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .button-64:hover span {
+    background: none;
+  }
+  
+  @media (min-width: 768px) {
+    .button-64 {
+      font-size: 20px;
+      min-width: 196px;
+    }
+  }
+  @media (min-width: 400px) {
+    .button-64 {
+      font-size: 20px;
+      min-width: 196px;
     }
   }
